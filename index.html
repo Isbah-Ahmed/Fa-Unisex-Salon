@@ -1,0 +1,2165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<title>F.A Unisex Salon</title>
+</head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Paste this line RIGHT HERE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        /* Your CSS starts here */
+    </style>
+</head>
+
+<style>
+
+
+  html{
+    margin:0;
+    padding:0;
+    background:#000;
+}
+
+body{
+    margin:0;
+    padding:0;
+    padding-top:80px;
+    background:#0B0B0B;
+}
+.hero-cinematic{
+    margin-top:0;
+    height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+
+    background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("images-/unnamed.webp") 70% center/cover no-repeat;
+}
+/* dark cinematic overlay */
+.overlay{
+  position:absolute;
+  top:0;left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.65);
+}
+
+/* text layer */
+.hero-content{
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    text-align: center;
+
+    transform: none;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  color: #D4AF37;
+  margin-bottom: 20px; /* some space below the heading */
+}
+
+.hero-content p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 30px; /* add space after the text */
+}
+
+.btn {
+  margin-bottom: 40px; /* space after the button so the next section doesn’t overlap */
+}
+
+/* animation */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+h1,h2,h3{
+  color:var(--primary);
+  font-family:'Playfair Display', serif;
+}
+
+p,li,span{
+  color:rgba(255,255,255,0.85);
+}
+
+:root{
+  --bg:#0B0B0B;          /* deep black */
+  --primary:#D4AF37;     /* gold */
+  --secondary:#1A1A1A;   /* dark grey */
+  --text:#FFFFFF;       /* white */
+  --accent:#B08D2A;     /* darker gold */
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
+
+body{
+    margin:0;
+    padding:0;
+    background:#0B0B0B;
+    color:var(--text);
+    font-family:'Playfair Display', serif;
+}
+
+/* NAV */
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+
+    width:100%;
+    height:80px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 50px;
+
+    background:#000;
+
+    border-bottom:1px solid rgba(212,175,55,.25);
+
+    box-shadow:0 5px 25px rgba(0,0,0,.8);
+
+    z-index:99999;
+
+    box-sizing:border-box;
+}
+
+nav h1{
+    color:#D4AF37 !important;
+    font-size:28px;
+    font-family:'Playfair Display',serif;
+    font-weight:700;
+    margin:0;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav ul li{
+    color:#fff;
+    cursor:pointer;
+    transition:.3s;
+}
+
+nav ul li:hover{
+    color:#D4AF37;
+}
+/* HERO */
+.hero{
+  text-align:center;
+  padding:90px 20px;
+  background:linear-gradient(135deg,var(--secondary),var(--bg));
+}
+.hero h2{font-size:38px;}
+.hero span{color:var(--primary);}
+.hero p{margin-top:10px;opacity:0.8}
+.btn{
+  background:var(--primary);
+  color:black;
+  padding:12px 24px;
+  border:none;
+  border-radius:30px;
+  font-weight:bold;
+  transition:0.3s;
+  box-shadow:0 0 15px rgba(212,175,55,0.3);
+}
+
+.btn:hover{
+  background:var(--accent);
+  transform:scale(1.05);
+}
+/* SECTIONS */
+section{padding:60px 20px;}
+.title{text-align:center;margin-bottom:25px;}
+.title h3{color:var(--primary);font-size:24px;}
+
+/* SERVICES */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:15px;
+}
+.card{
+  background:rgba(0,0,0,0.96);
+  border:1px solid rgba(212,175,55,0.2);
+  padding:25px;
+  border-radius:14px;
+  transition:0.3s;
+  backdrop-filter:blur(8px);
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border:1px solid var(--primary);
+  box-shadow:0 10px 30px rgba(212,175,55,0.15);
+}
+.card:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,0.1);}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:10px;
+}
+.img{
+  height:120px;
+  border-radius:10px;
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+}
+.gallery img{
+    transition:.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* BOOKING */
+form{
+  background:#141414;
+  padding:20px;
+  border-radius:12px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  border:1px solid #eee;
+}
+input,textarea{
+  background:#1E1E1E;
+  color:white;
+  border:1px solid rgba(212,175,55,.25);
+  padding:12px;
+  border-radius:8px;
+}
+
+/* FOOTER */
+
+/* ================================
+   PREMIUM SERVICES
+================================ */
+
+.services-section{
+    padding:90px 8%;
+    background:#0B0B0B;
+}
+
+.services-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.services-title h2{
+    font-size:46px;
+    color:#D4AF37;
+    margin-bottom:15px;
+}
+
+.services-title p{
+    color:#cfcfcf;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.service-tabs{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+    margin-bottom:45px;
+}
+
+.tab-btn{
+    background:transparent;
+    border:none;
+    color:#bcbcbc;
+    font-size:17px;
+    cursor:pointer;
+    padding:10px 18px;
+    transition:.3s;
+    border-bottom:2px solid transparent;
+}
+
+.tab-btn.active{
+    color:#D4AF37;
+    border-color:#D4AF37;
+}
+
+.tab-btn:hover{
+    color:#D4AF37;
+}
+
+.service-content{
+    display:none;
+}
+
+.service-content.active{
+    display:block;
+    animation:fade .35s;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+to{
+opacity:1;
+transform:none;
+}
+}
+
+.service-table{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+    border-collapse:collapse;
+    background:#141414;
+    border:1px solid rgba(212,175,55,.15);
+}
+
+.service-table tr{
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.service-table td{
+    padding:18px 25px;
+    font-size:17px;
+}
+
+.service-table td:last-child{
+    width:170px;
+    text-align:right;
+    color:#D4AF37;
+    font-weight:bold;
+}
+
+.service-table tr:hover{
+    background:#1d1d1d;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:#2B1D16;
+  color:white;
+  margin-top:20px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:12px 15px;
+  border-radius:50px;
+  text-decoration:none;
+}
+
+.hero-about{
+    margin-top:40px;
+    max-width:780px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+.hero-about h3{
+    color:#D4AF37;
+    font-size:30px;
+    margin-bottom:18px;
+}
+
+.hero-about p{
+    font-family:'Inter',sans-serif;
+    font-size:17px;
+    line-height:1.8;
+    color:rgba(255,255,255,.88);
+}
+/* ==========================
+   Premium Statistics Section
+========================== */
+
+.stats-section{
+    max-width:1100px;
+    margin:70px auto;
+    padding:45px 60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+    background:linear-gradient(180deg,#111,#090909);
+    border:1px solid rgba(212,175,55,.18);
+    border-radius:18px;
+    box-shadow:0 15px 50px rgba(0,0,0,.45);
+}
+
+.stat-card{
+    flex:1;
+    text-align:center;
+}
+
+.stat-card h2{
+    font-family:'Playfair Display',serif;
+    font-size:58px;
+    color:#D4AF37;
+    margin-bottom:12px;
+}
+
+.stat-card p{
+    color:#d7d7d7;
+    font-size:18px;
+    line-height:1.8;
+    max-width:300px;
+    margin:auto;
+    font-family:'Inter',sans-serif;
+}
+
+.stat-divider{
+    width:1px;
+    height:120px;
+    background:rgba(212,175,55,.25);
+}
+
+@media(max-width:768px){
+
+.stats-section{
+    flex-direction:column;
+    gap:35px;
+    padding:35px 20px;
+}
+
+.stat-divider{
+    width:70%;
+    height:1px;
+}
+
+.stat-card h2{
+    font-size:44px;
+}
+
+}
+
+
+/*================ PREMIUM SERVICES ================*/
+
+.services-section{
+    padding:60px 20px 90px;
+    background:#0B0B0B;
+}
+
+.services-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.services-title h2{
+    font-size:42px;
+    color:#D4AF37;
+    margin-bottom:15px;
+}
+
+.services-title p{
+    color:#bdbdbd;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    font-size:17px;
+}
+
+.service-tabs{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    margin-bottom:45px;
+    flex-wrap:wrap;
+}
+
+.tab-btn{
+    background:none;
+    border:none;
+    color:#999;
+    font-size:18px;
+    cursor:pointer;
+    padding-bottom:10px;
+    transition:.3s;
+    border-bottom:2px solid transparent;
+}
+
+.tab-btn:hover{
+    color:#D4AF37;
+}
+
+.tab-btn.active{
+    color:#D4AF37;
+    border-bottom:2px solid #D4AF37;
+}
+
+.service-content{
+    display:none;
+}
+
+.service-content.active{
+    display:block;
+}
+
+.service-table{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+    border-collapse:collapse;
+    background:#141414;
+    border-radius:16px;
+    overflow:hidden;
+}
+
+.service-table tr{
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.service-table tr:last-child{
+    border-bottom:none;
+}
+
+.service-table td{
+    padding:18px 28px;
+    font-size:17px;
+}
+
+.service-table td:first-child{
+    color:white;
+}
+
+.service-table td:last-child{
+    color:#D4AF37;
+    text-align:right;
+    font-weight:600;
+}
+
+/*================ HERO TAGLINE ================*/
+
+.hero-tagline{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    margin:28px 0 38px;
+}
+
+.hero-tagline span{
+    width:70px;
+    height:1px;
+    background:rgba(212,175,55,.45);
+}
+
+.hero-tagline p{
+    margin:0;
+    font-family:'Playfair Display',serif;
+    font-size:20px;
+    font-style:italic;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#d9c27b;
+}
+
+/*================ GALLERY ================*/
+
+.gallery-section{
+    padding:90px 6%;
+    background:#0B0B0B;
+}
+
+.gallery-heading{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.gallery-heading h2{
+    font-size:42px;
+    color:#D4AF37;
+    margin-bottom:15px;
+}
+
+.gallery-heading p{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:28px;
+
+    font-style:italic;
+
+    font-weight:400;
+
+    line-height:1.5;
+
+    color:#d8c28a;
+
+    max-width:760px;
+
+    margin:18px auto 0;
+
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.gallery-item{
+    overflow:hidden;
+    border-radius:18px;
+    height:380px;
+    background:#111;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+.gallery-item:hover{
+    box-shadow:0 15px 40px rgba(212,175,55,.28);
+}
+
+@media(max-width:900px){
+
+.gallery-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.gallery-grid{
+grid-template-columns:1fr;
+}
+
+.gallery-item{
+height:320px;
+}
+
+}
+
+/*==================================================
+                PREMIUM REVIEWS
+==================================================*/
+
+.reviews-section{
+    padding:70px 7% 100px;
+    background:#0B0B0B;
+}
+
+.reviews-top{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:35px;
+    margin: bottom 10px;
+
+}
+
+.small-title{
+
+    display:block;
+
+    text-align:center;
+
+    font-family:'Inter',sans-serif;
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:#B58B2A;
+
+    margin-bottom:18px;
+
+}
+
+.reviews-heading h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:72px;
+
+    font-weight:500;
+
+    line-height:1.05;
+
+    letter-spacing:-1px;
+
+    color:#fff;
+
+    margin:0;
+
+   max-width:900px;
+text-align:center;
+
+}
+
+.reviews-heading h2 span{
+
+    display:block;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-style:italic;
+
+    font-size:82px;
+
+    font-weight:500;
+
+    color:#D4AF37;
+
+    margin-top:5px;
+
+}
+
+.rating-box{
+
+    width:330px;
+
+    margin:auto;
+
+    background:#121212;
+
+    border:1px solid rgba(212,175,55,.18);
+
+    border-radius:22px;
+
+    padding:30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.rating-left h3{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:58px;
+
+    color:#ffffff;
+
+    margin:0;
+
+    line-height:1;
+
+}
+
+.stars{
+
+    color:#D4AF37;
+
+    font-size:18px;
+
+    margin-top:10px;
+
+    letter-spacing:3px;
+
+}
+
+.rating-divider{
+
+    width:1px;
+
+    height:90px;
+
+    background:rgba(255,255,255,.12);
+
+}
+
+.rating-right h4{
+
+    margin:0 0 8px;
+
+    color:#B58B2A;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    font-family:'Inter',sans-serif;
+
+}
+
+.rating-right strong{
+
+    display:block;
+
+    color:#fff;
+
+    font-size:20px;
+
+    margin-bottom:8px;
+
+}
+
+.rating-right p{
+
+    margin:0;
+
+    color:#999;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    font-family:'Inter',sans-serif;
+
+}
+
+.reviews-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+/*==================================================
+                REVIEW CARDS
+==================================================*/
+
+.review-card{
+
+    position:relative;
+
+background:#1f1900;
+    border:1px solid rgba(177, 170, 145, 0.14);
+
+    border-radius:22px;
+
+    padding:38px;
+
+    transition:.35s;
+
+    overflow:hidden;
+
+    min-height:310px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+}
+
+.review-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 30px 60px rgba(0,0,0,.12);
+
+border-color:#D4AF37;
+
+}
+
+.quote-mark{
+
+    position:absolute;
+
+    top:20px;
+
+    right:26px;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:72px;
+
+    color:rgba(212,175,55,.12);
+
+    line-height:1;
+
+}
+
+.review-stars{
+
+    color:#D4AF37;
+
+    letter-spacing:3px;
+
+    font-size:17px;
+
+    margin-bottom:22px;
+
+}
+
+.review-text{
+
+    color:#ffffff;
+
+    font-family:'Inter',sans-serif;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    margin:0 0 35px;
+
+}
+
+.review-user{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-top:auto;
+
+}
+
+.review-avatar{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    background:#D4AF37;
+
+color:#111;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:700;
+
+    font-size:22px;
+
+    font-family:'Inter',sans-serif;
+
+}
+
+.review-user h4{
+
+    margin:0;
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-family:'Playfair Display',serif;
+
+    font-weight:500;
+
+}
+
+.review-user span{
+
+    display:block;
+
+    margin-top:5px;
+
+    color:#999;
+
+    font-size:14px;
+
+    font-family:'Inter',sans-serif;
+
+}
+
+/*================ Mobile ================*/
+
+@media(max-width:1100px){
+
+.reviews-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.reviews-top{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.rating-box{
+
+width:100%;
+
+}
+
+.reviews-heading h2{
+
+font-size:42px;
+
+}
+
+.reviews-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.review-card{
+
+min-height:auto;
+
+}
+
+}
+
+/*==================================================
+                INSTAGRAM SECTION
+==================================================*/
+
+.instagram-section{
+
+    background:#F8F5F0;
+
+    padding:100px 7%;
+
+}
+
+.instagram-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    gap:60px;
+
+    margin-bottom:60px;
+
+    flex-wrap:wrap;
+
+}
+
+.instagram-text span{
+
+    display:inline-block;
+
+    color:#C69C2D;
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    font-size:13px;
+
+    font-family:'Inter',sans-serif;
+
+    border-top:2px solid #C69C2D;
+
+    padding-top:12px;
+
+    margin-bottom:20px;
+
+}
+
+.instagram-text h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:70px;
+
+    line-height:1.05;
+
+    font-weight:500;
+
+    color:#111;
+
+    margin:0;
+
+}
+
+.instagram-text h2 em{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-style:italic;
+
+    color:#C69C2D;
+
+    font-weight:500;
+
+}
+
+.instagram-text p{
+
+    margin-top:18px;
+
+    max-width:600px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#555;
+
+    font-family:'Inter',sans-serif;
+
+}
+
+/* Button */
+
+.insta-btn{
+
+    background:#111;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    padding:22px 38px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    font-family:'Inter',sans-serif;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    font-size:14px;
+
+    transition:.35s;
+
+}
+
+.insta-btn:hover{
+
+    background:#C69C2D;
+
+    color:#fff;
+
+}
+
+/* Gallery */
+
+.instagram-gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(6,1fr);
+
+    gap:18px;
+
+}
+
+.instagram-gallery img{
+
+    width:100%;
+
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+    cursor:pointer;
+
+}
+
+.instagram-gallery img:hover{
+
+    transform:scale(1.06);
+
+}
+
+/* Responsive */
+
+@media(max-width:1100px){
+
+.instagram-gallery{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+@media(max-width:700px){
+
+.instagram-top{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.instagram-text h2{
+
+font-size:48px;
+
+}
+
+.instagram-gallery{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.insta-btn{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+}
+
+.arrow{
+    font-size: 18px;
+    margin-left: 8px;
+    vertical-align: middle;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.arrow:hover{
+    transform: translateY(3px);
+}
+
+.whatsapp{
+    position: fixed;
+    bottom: 250px; /* Adjusted to place it above the Facebook button */
+    right: 25px;
+    width: 65px;
+    height: 65px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    z-index: 9999;
+    transition: all .3s ease;
+}
+
+.whatsapp:hover{
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+
+.facebook{
+    position: fixed;
+    bottom: 175px;   /* Places it above the WhatsApp button */
+    right: 25px;
+    width: 65px;
+    height: 65px;
+    background: #1877F2;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    z-index: 9999;
+    transition: all .3s ease;
+}
+
+.facebook:hover{
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+
+.youtube{
+    position: fixed;
+    bottom: 100px;  /* Adjusted to place it above the Facebook button */
+    right: 25px;
+    width: 65px;
+    height: 65px;
+    background: #FF0000;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    z-index: 9999;
+    transition: all .3s ease;
+}
+
+.youtube:hover{
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+
+.call{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 65px;
+    height: 65px;
+    background: #111;
+    color: #D4AF37;
+    border: 2px solid #D4AF37;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    z-index: 9999;
+    transition: all .3s ease;
+}
+
+.call:hover{
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+
+/* Premium Navigation */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:80px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 50px;
+    box-sizing:border-box;
+
+    background:#000;
+    border-bottom:1px solid rgba(212,175,55,.25);
+    box-shadow:0 5px 25px rgba(0,0,0,.8);
+
+    z-index:99999;
+}
+
+nav h1{
+    font-family:'Playfair Display',serif;
+    font-size:28px;
+    color:#D4AF37;
+    margin:0;
+    white-space:nowrap;
+}
+
+nav ul{
+    display:flex;
+    align-items:center;
+    gap:45px;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    letter-spacing:1px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#D4AF37;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: inherit;
+}
+
+nav ul li a:hover{
+    color: #D4AF37;
+}
+
+#services{
+    scroll-margin-top: 130px;
+}
+
+#gallery{
+    scroll-margin-top: 130px;
+}
+
+/* WhatsApp Glow Animation */
+
+#address{
+    scroll-margin-top:120px;
+}
+
+/*==================================================
+        MOBILE RESPONSIVE
+==================================================*/
+
+@media (max-width:768px){
+
+/* Navigation */
+
+nav{
+    padding:15px 20px;
+    flex-direction:column;
+    gap:15px;
+}
+
+nav h1{
+    font-size:22px;
+    white-space:nowrap;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+    padding:0;
+}
+
+nav ul li a{
+    font-size:15px;
+}
+
+/* Hero */
+
+.hero-cinematic{
+    min-height:100vh;
+    padding:120px 20px 60px;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:100%;
+    transform:none !important;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:34px;
+    line-height:1.2;
+}
+
+.hero-content h2{
+    font-size:24px;
+}
+
+.hero-content p{
+    font-size:16px;
+    line-height:1.8;
+}
+
+.btn{
+    padding:14px 28px;
+    font-size:16px;
+}
+
+/* Services */
+
+.services-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+}
+
+.service-card img{
+    height:260px;
+}
+
+/* Gallery */
+
+.gallery-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Instagram */
+
+.instagram-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+/* Map */
+
+.map-container iframe{
+    height:350px;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:40px 20px;
+}
+
+/* Floating Buttons */
+
+.whatsapp,
+.facebook,
+.youtube,
+.call{
+
+    width:52px;
+    height:52px;
+    font-size:22px;
+
+}
+
+.whatsapp{
+
+    bottom:20px;
+
+}
+
+.facebook{
+
+    bottom:85px;
+
+}
+
+.youtube{
+
+    bottom:150px;
+
+}
+
+.call{
+
+    bottom:215px;
+
+}
+
+}
+
+html,body{
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+.salon-address{
+    margin:35px auto 0;
+    max-width:650px;
+    text-align:center;
+}
+
+.salon-address h3{
+    font-family:'Cormorant Garamond', serif;
+    font-size:34px;
+    font-weight:1000;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:#111;
+    margin-bottom:18px;
+}
+
+.salon-address p{
+    font-family:'Inter', sans-serif;
+    font-size:19px;
+    font-weight:500;
+    line-height:2;
+    color:#111;
+    margin:0;
+}
+
+</style>
+</head>
+
+<body id="home">
+
+<nav>
+  <h1>F.A Unisex Salon</h1>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#address">Address</a></li>
+  </ul>
+</nav>
+
+<div id="home" class="hero-cinematic">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <h1>Beauty & Bridal Makeup Studio</h1>
+
+        <div class="hero-tagline">
+
+    <span></span>
+
+    <p>Your Beauty, Our Canvas</p>
+
+    <span></span>
+
+</div>
+
+        <a href="https://wa.me/919758993220?text=I%20would%20like%20to%20book%20an%20appointment" class="btn" target="_blank">Book Appointment</a>
+
+        <div class="hero-about">
+
+            <h3>Where Beauty Becomes an Experience</h3>
+
+            <p>
+                At <strong>F.A UNISEX SALON</strong>, beauty is more than a service—it's an experience crafted with passion and perfection. Our expert beauty artists specialize in bridal makeup, professional hair styling, skincare, and grooming, using premium products and personalized consultations to create looks that reflect your unique personality. Step into a space where luxury, elegance, and exceptional care come together to make every visit unforgettable.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<section class="stats-section">
+
+    <div class="stat-card">
+        <h2>13+</h2>
+        <p>Years of Professional Salon Excellence</p>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-card">
+        <h2>30,000+</h2>
+        <p>Happy Clients Served</p>
+    </div>
+
+</section>   <!-- End of 13+ Years Experience -->
+
+<!--================ GALLERY ================-->
+
+<section class="gallery-section">
+
+    <div class="gallery-heading">
+        <h2 id="gallery">Experience Luxury</h2>
+
+        <p>
+            Discover bridal artistry, luxury hair styling,
+            premium skincare and flawless transformations.
+        </p>
+    </div>
+
+  <div class="gallery-grid">
+
+    <div class="gallery-item"><img src="images-/p1.webp" alt=""></div>
+    <div class="gallery-item"><img src="images-/p2.webp" alt=""></div>
+    <div class="gallery-item"><img src="images-/p3.webp" alt=""></div>
+
+    <div class="gallery-item"><img src="images-/p4.webp" alt=""></div>
+    <div class="gallery-item"><img src="images-/p5.webp" alt=""></div>
+    <div class="gallery-item"><img src="images-/p6.webp" alt=""></div>
+
+    <div class="gallery-item"><img src="images-/p7.webp" alt=""></div>
+    <div class="gallery-item"><img src="images-/p8.webp" alt=""></div>
+    <div class="gallery-item"><img src="images-/p9.webp" alt=""></div>
+
+</div>
+
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+
+<section class="reviews-section">
+
+<div class="reviews-top">
+
+<div class="reviews-heading">
+
+<span class="small-title">LOVED BY CLIENTS</span>
+
+<h2>
+Reviews that read like
+<span>love letters.</span>
+</h2>
+
+<div class="rating-box">
+
+    <div class="rating-left">
+        <h3>4.6</h3>
+
+        <div class="stars">
+            ★★★★★
+        </div>
+    </div>
+
+    <div class="rating-divider"></div>
+
+    <div class="rating-right">
+
+        <h4>GOOGLE & JUST DIAL</h4>
+
+        <strong>720+ verified reviews</strong>
+
+        <p>Aggregated from public listings</p>
+
+    </div>
+
+</div>
+
+</div>
+
+<div class="reviews-grid">
+
+  <div class="review-card">
+
+    <div class="quote-mark">“</div>
+
+    <div class="review-stars">★★★★★</div>
+
+    <p class="review-text">
+        I absolutely loved my experience! The attention to detail, patience, and skill were incredible. My hair turned out even better than I imagined. I highly recommend F.A Unisex Salon if you're looking for someone who truly cares about their work.
+    </p>
+
+    <div class="review-user">
+        <div class="review-avatar">P</div>
+        <div>
+            <h4>Pranavi Mehta</h4>
+            <span>Google Review</span>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="review-card">
+
+    <div class="quote-mark">“</div>
+
+    <div class="review-stars">★★★★★</div>
+
+    <p class="review-text">
+        I travelled from Delhi for my daughter's wedding in Rishikesh and booked my bridal makeup at F.A Unisex Salon. The base was absolutely flawless, and the natural glow received so many compliments. Highly recommended for bridal makeup.
+    </p>
+
+    <div class="review-user">
+        <div class="review-avatar">I</div>
+        <div>
+            <h4>Israr Bharti</h4>
+            <span>Google Review</span>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="review-card">
+
+    <div class="quote-mark">“</div>
+
+    <div class="review-stars">★★★★★</div>
+
+    <p class="review-text">
+        Excellent service and very professional staff. The management is well organised, everyone is courteous, and customer satisfaction is clearly their priority. My family and I will definitely keep visiting again.
+    </p>
+
+    <div class="review-user">
+        <div class="review-avatar">S</div>
+        <div>
+            <h4>Sachin Goswami</h4>
+            <span>Google Review</span>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="review-card">
+
+    <div class="quote-mark">“</div>
+
+    <div class="review-stars">★★★★★</div>
+
+    <p class="review-text">
+        Amazing experience! The hospitality is exceptional and the services are consistently excellent. I've been visiting for over 13 years and every appointment has been wonderful. The staff are friendly, skilled and truly make you feel pampered.
+    </p>
+
+    <div class="review-user">
+        <div class="review-avatar">S</div>
+        <div>
+            <h4>Sangeeta Tyagi</h4>
+            <span>Google Review</span>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="review-card">
+
+    <div class="quote-mark">“</div>
+
+    <div class="review-stars">★★★★★</div>
+
+    <p class="review-text">
+        I travelled all the way from Guwahati for my wedding at Neelkanth Temple and booked F.A Unisex Salon after finding them online. Despite a busy schedule, my bridal makeup was exactly as I wanted. Everything looked flawless and I couldn't have been happier.
+    </p>
+
+    <div class="review-user">
+        <div class="review-avatar">N</div>
+        <div>
+            <h4>Nandini Bisht</h4>
+            <span>Google Review</span>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="review-card">
+
+    <div class="quote-mark">“</div>
+
+    <div class="review-stars">★★★★★</div>
+
+    <p class="review-text">
+        Ms. Zeba did my hair and makeup for a family wedding exactly the way I wanted. The entire look was completed within an hour and exceeded my expectations. I highly recommend F.A Unisex Salon for any special occasion.
+    </p>
+
+    <div class="review-user">
+        <div class="review-avatar">S</div>
+        <div>
+            <h4>Shivani</h4>
+            <span>Google Review</span>
+        </div>
+    </div>
+
+</div>  
+
+<!-- ================= INSTAGRAM ================= -->
+
+
+</section>
+
+<!-- ================= PREMIUM SERVICES START ================= -->
+
+<section class="services-section">
+
+    <div class="services-title">
+
+        <h2 id="services">Our Premium Services</h2>
+        <p>
+            Discover a complete range of luxury beauty and grooming services tailored to your needs.
+        </p>
+    </div>
+
+    <div class="service-tabs">
+
+        <button class="tab-btn active" onclick="showService('hair', this)">Hair</button>
+
+        <button class="tab-btn" onclick="showService('face', this)">Face</button>
+
+        <button class="tab-btn" onclick="showService('bridal', this)">Bridal</button>
+
+        <button class="tab-btn" onclick="showService('men', this)">Men</button>
+
+    </div>
+
+    <!-- Hair -->
+
+    <div id="hair" class="service-content active">
+
+        <table class="service-table">
+
+            <tr><td>Hair Wash + Conditioning</td><td>₹99</td></tr>
+            <tr><td>Hair Cut (Female)</td><td>₹199</td></tr>
+            <tr><td>Girl's Hair Cut</td><td>₹349</td></tr>
+            <tr><td>Hair Blow Dry & Shampoo Wash</td><td>₹499</td></tr>
+            <tr><td>Hair Cut & Hair Wash</td><td>₹499</td></tr>
+            <tr><td>Volume Hair Spa</td><td>₹799</td></tr>
+            <tr><td>Hair Keratin</td><td>₹1,999</td></tr>
+            <tr><td>Hair Keratin (Men)</td><td>₹2,499</td></tr>
+            <tr><td>Hair Smoothening</td><td>₹2,999</td></tr>
+            <tr><td>Hair Rebonding</td><td>₹2,999</td></tr>
+
+        </table>
+
+    </div>
+
+    <!-- Face -->
+
+    <div id="face" class="service-content">
+
+        <table class="service-table">
+
+            <tr><td>Upper Lip Threading</td><td>₹99</td></tr>
+            <tr><td>Half Leg Chocolate Waxing</td><td>₹299</td></tr>
+            <tr><td>Bleach</td><td>₹499</td></tr>
+            <tr><td>Fruit Face Bleach</td><td>₹499</td></tr>
+            <tr><td>Classic D-Tan</td><td>₹499</td></tr>
+            <tr><td>Full Leg Chocolate Waxing</td><td>₹599</td></tr>
+            <tr><td>Skin Lifting Facial</td><td>₹999</td></tr>
+            <tr><td>Classic Facial</td><td>₹1,199</td></tr>
+
+        </table>
+
+    </div>
+
+    <!-- Bridal -->
+
+    <div id="bridal" class="service-content">
+
+        <table class="service-table">
+
+            <tr><td>Party Makeup</td><td>₹3,500</td></tr>
+            <tr><td>Engagement Makeup</td><td>₹7,000</td></tr>
+            <tr><td>AirBrush Bridal Makeup</td><td>₹12,000</td></tr>
+
+        </table>
+
+    </div>
+
+    <!-- Men -->
+
+    <div id="men" class="service-content">
+
+        <table class="service-table">
+
+            <tr><td>Hair Wash + Conditioning</td><td>₹99</td></tr>
+            <tr><td>Normal Beard Trim</td><td>₹99</td></tr>
+            <tr><td>Beard Shaving</td><td>₹99</td></tr>
+            <tr><td>Hair Cut</td><td>₹199</td></tr>
+            <tr><td>Head Massage</td><td>₹399</td></tr>
+            <tr><td>Hair Blow Dry & Shampoo Wash</td><td>₹499</td></tr>
+            <tr><td>Hair Cut & Hair Wash</td><td>₹499</td></tr>
+            <tr><td>Special Manicure</td><td>₹549</td></tr>
+            <tr><td>Special Pedicure</td><td>₹649</td></tr>
+            <tr><td>Hair Spa</td><td>₹1,199</td></tr>
+            <tr><td>Hair Keratin</td><td>₹2,499</td></tr>
+            <tr><td>Hair Rebonding</td><td>₹2,999</td></tr>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- ================= PREMIUM SERVICES END ================= -->
+
+<!-- ================= INSTAGRAM ================= -->
+
+<section class="instagram-section">
+
+    <div class="instagram-top">
+
+        <div class="instagram-text">
+
+            <span>INSTAGRAM</span>
+
+            <h2>
+                Follow our
+                <em>daily diary.</em>
+            </h2>
+
+            <p>
+                Behind the scenes, bridal transformations, luxury hair styling,
+                skincare rituals and salon moments.
+            </p>
+
+        </div>
+
+        <a href="https://instagram.com/fa_unisexsalon_haridwar"
+           target="_blank"
+           class="insta-btn">
+
+            FOLLOW @FA_UNISEXSALON_HARIDWAR
+
+        </a>
+
+    </div>
+
+    <div class="instagram-gallery">
+
+        <img src="images-/p1.webp" alt="">
+        <img src="images-/p2.webp" alt="">
+        <img src="images-/p3.webp" alt="">
+        <img src="images-/p4.webp" alt="">
+        <img src="images-/p7.webp" alt="">
+        <img src="images-/p6.webp" alt="">
+
+    </div>
+
+
+
+</section>
+
+<section id="address">
+  <div class="title">
+      <h3>Find Us on Map</h3>
+
+  <div style="text-align:center;background:#dfbb67;padding:20px;border-radius:12px;">
+
+    <p style="margin-bottom:10px; color:#000; font-family:'Playfair Display', serif; font-size:24px; font-weight:600;">
+    Visit our salon location in Haridwar <span class="arrow">▾</span>
+</p>
+
+    <iframe
+      src="https://www.google.com/maps?q=F.A%20Unisex%20Salon%20Haridwar&output=embed"
+      width="100%"
+      height="250"
+      style="border:0;border-radius:12px;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+
+    <a href="https://www.google.com/maps?q=F.A%20Unisex%20Salon%20Haridwar"
+    target="_blank"
+    style="display:inline-block;
+    margin-top:10px;
+    padding:10px 18px;
+    background:#000000;
+    color:white;
+    border-radius:20px;
+    text-decoration:none;">
+      Open in Google Maps
+    </a>
+
+<div class="salon-address">
+
+<h3>ADDRESS</h3>
+
+<p>
+Ground Floor, Shankar Ashram, Puma Outlet,<br>
+Yogi Vihar Colony, Model Colony,Haridwar, Jwalapur,<br>
+Uttarakhand 249407
+</p>
+
+</div>
+</section>
+
+<footer>
+    &copy; F.A UNISEX SALON | Beauty &amp; Bridal Makeup Studio
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919758993220?text=I%20would%20like%20to%20book%20an%20appointment" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<a class="facebook" href="https://www.facebook.com/fasalonharidwar/" target="_blank" aria-label="Visit our Facebook page">
+    <i class="fa-brands fa-facebook-f"></i>
+</a>
+
+<a class="youtube" href="https://www.youtube.com/@faunisexsalon9138/featured" target="_blank" aria-label="Visit our YouTube channel">
+    <i class="fa-brands fa-youtube"></i>
+</a>
+
+<a class="call" href="tel:+919758993220" aria-label="Call F.A Unisex Salon">
+    <i class="fa-solid fa-phone"></i>
+</a>
+
+<script>
+
+function showService(id, btn){
+
+    // Hide all service tables
+    document.querySelectorAll(".service-content").forEach(function(content){
+        content.classList.remove("active");
+    });
+
+    // Show selected table
+    document.getElementById(id).classList.add("active");
+
+    // Remove active tab
+    document.querySelectorAll(".tab-btn").forEach(function(tab){
+        tab.classList.remove("active");
+    });
+
+    // Highlight clicked tab
+    btn.classList.add("active");
+}
+
+</script>
+
+</body>
+</html>
